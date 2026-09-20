@@ -1,1 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Image Gallery</h1>
 
+        <div class="filters">
+           <button class="filter-btn active" data-filter="all">All</button>
+           <button class="filter-btn" data-filter="nature">Nature</button>
+           <button class="filter-btn" data-filter="animals">Animals</button>
+           <button class="filter-btn" data-filter="people">People</button>
+        </div>
+
+        <div class="gallery">
+            <img src="images/image1.jpg" data-category="people" alt="People 1">
+            <img src="images/image2.jpg" data-category="people" alt="People 2">
+            <img src="images/image3.jpg" data-category="people" alt="People 3">
+            <img src="images/image4.webp" data-category="people" alt="People 4">
+            <img src="images/image5.jpg" data-category="animals" alt="Animals 1">
+            <img src="images/image6.webp" data-category="nature" alt="Nature 1">
+            <img src="images/image7.webp" data-category="nature" alt="Nature 2">
+            <img src="images/image8.jpg" data-category="animals" alt="Animals 2">
+            <img src="images/image9.jpg" data-category="animals" alt="Animals 3">
+        </div>
+    </div>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+        <span id="closeBtn" title="Close">&times;</span>
+        <button id="prevBtn" class="nav-btn prev" title="Previous Image">&#10094;</button>
+        <div class="lightbox-content">
+            <img id="lightboxImage" src="" alt="Enlarged gallery preview">
+        </div>
+        <button id="nextBtn" class="nav-btn next" title="Next Image">&#10095;</button>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
